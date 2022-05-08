@@ -1,0 +1,14 @@
+options {
+    directory "/var/cache/bind";
+
+    recursion yes; # enables resursive queries
+    listen-on { any; };
+    allow-transfer { none; }; # disable zone transfers by default
+
+    forwarders {
+        8.8.8.8;
+        1.1.1.1;
+        8.8.4.4;
+        1.0.0.1;
+    };
+};
